@@ -15,7 +15,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker"
+  app: "docker-react"
   env: "DockerReact-env"
   bucket_name: "elasticbeanstalk-us-east-2-713921834568" ## S3 bucket path for the elastic beanstalk
   bucket_path: "docker-react" ## S3 folder in which the docker container would be stored
@@ -23,7 +23,7 @@ deploy:
     branch: master ## Github branch which would be used for the deployment
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  
+
 ## Travis CI AWS Key(IAM KEYS):
 ## access_key_id: $AWS_ACCESS_KEY
 ## secret_access_key: $AWS_SECRET_KEY
